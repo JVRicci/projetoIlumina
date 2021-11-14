@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link src='script/loginScript.js' type='text/javascript' rel='script'>
+
+                
+        <link rel="stylesheet" href='estilo/estiloLogin.css' >
+
+        <title> Login </title>
+
+    </head>
+    <body>
+
+        
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        
+
+        <div class="lateralEsq"></div>
+
+        <h1 class="tituloPagina">Iluminação</h1>
+
+        <div class="loginForm">
+        <form action="login.php" method="POST" >
+
+            <input type="text" name='login' class="login" id="loginTxt" placeholder="Login"><br><br>
+            <input type="password" name='senha' class="senha" id="senhaTxt" placeholder="Senha"><br><br>
+            <input type="submit" id="confirmaBt" class="btn btn-primary" ></input> <br><br>
+            
+        </form>
+
+        <button id="cadastrarBt" class="btn btn-secondary" >Cadastrar</button> 
+
+    </div>
+
+    <div id="modalCadastro" class="modal-container">
+        <div class="modal">
+            <h3 class="tituloCad">Cadastre-se</h3>
+            
+            <button class="fecharCad">X</button>
+            <form action="cadastroIlumina.php" method="POST">
+                <input type="text" id="nomeCadTxt" class="formulaCadNome" placeholder="nome">
+                <input type="text" id="emailCadTxt" class="formulaCadEmail" placeholder="email"><br> <br>
+                <input type="text" id="loginCadTxt" class="formulaCadLogin" placeholder="login">
+                <input type="password" id="senhaCadTxt" class="formulaCadSenha" placeholder="senha"><br>
+                <input type="submit" id='finalizaCadBt' class="formulaCadFim" placeholder="Cadastrar">
+            </form>
+        </div>
+    </div>
+
+    
+
+    <script src='script/loginScript.js'></script>
+
+    </body>
+</html>

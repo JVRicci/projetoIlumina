@@ -1,0 +1,219 @@
+
+h1, p{
+    font-family: Helvetica;
+}
+
+button{
+    font-family: Helvetica;
+}
+
+.lateralEsq{
+    background-color: darkgray;
+    
+    position:absolute;
+
+    height: 110%;
+    width: 50%;
+    min-width: 300px;
+
+    justify-content: center;
+    align-content: center;
+
+}
+body{
+    z-index: 1500;
+}
+
+.tituloPagina{
+
+    position: relative;
+    top: 100px;
+    left: 62.7%;
+    font-size: 25px;
+
+}
+
+.loginForm{
+
+    position: absolute;
+    top: 200px;
+    right: 25%;
+    align-items: center;
+}
+
+.login{
+
+    border-radius: 7px;
+    top: 180px;
+    left: 50%;
+}
+
+.senha{
+
+    border-radius: 7px;
+    top: 180px;
+    left: 50%;
+}
+
+#confirmaBt{
+    
+    height: 35px;
+    width: 80px;
+    background-color: #007bff;
+    color:rgb(255, 255, 255);
+    border-style: none;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+    left: 23%;
+}
+
+#cadastrarBt{
+
+    background-color: grey;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border-style: none;
+    position: relative;
+    left: 27%;
+}
+
+/* MODAL CADASTRO */
+
+.modalFundo{
+    width: 100vw;
+    height: 100vw;
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index:2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container{
+
+    position: fixed;
+    top: 150px;
+    left: 35%;
+    z-index:2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    background: white;
+    width: 25%;
+    min-width: 300px;
+    padding: 40px;
+    border: 10px solid darkgray;
+    border-radius: 5px;
+    box-shadow: 0 0 0 10px white;
+}
+
+.fecharCad{
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    height: 50px;
+    width: 50px;
+    border: 50%;
+    border: 4px solid white;
+    border-radius: 25px;
+    background: grey;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0;
+}
+
+.tituloCad{
+    position: absolute;
+    top: 10px;
+    left: 35%;
+}
+
+
+.formulaCadNome{
+
+    display: block;
+    top: 40%;
+    left: 40%;
+    position: fixed;
+    border-radius: 10px;
+    box-shadow: black;
+    width: 125px;
+
+}
+.formulaCadEmail{
+
+    display: block;
+    top: 40%;
+    right: 37%;
+    position: fixed;
+    border-radius: 10px;
+    box-shadow: black;
+    width: 125px;
+
+}
+.formulaCadLogin{
+
+    display: block;
+    top: 45%;
+    left: 40%;
+    position: fixed;
+    border-radius: 10px;
+    box-shadow: black;
+    width: 125px;
+
+}
+.formulaCadSenha{
+
+    display: block;
+    top: 45%;
+    right: 37%;
+    position: fixed;
+    border-radius: 10px;
+    box-shadow: black;
+    width: 125px;
+
+}
+.formulaCadFim{
+
+    display: block;
+    top: 52%;
+    right: 45%;
+    position: fixed;
+    border-radius: 10px;
+    box-shadow: black;
+    width: 125px;
+
+}
+
+.modal-container.mostrar{
+    display: inherit;
+
+}
+
+@keyframes modal{
+    from{
+        opacity: 0 ;
+        transform: translated3d(0, -60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translated3d (0, 0px,0);
+    }
+}
+
+.mostrar .modal{
+    animation: modal .3s;
+}
+
+/*
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+        crossorigin="anonymous">
