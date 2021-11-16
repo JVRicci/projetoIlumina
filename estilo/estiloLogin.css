@@ -28,7 +28,7 @@ body{
 
     position: relative;
     top: 100px;
-    left: 62.7%;
+    left: 64%;
     font-size: 25px;
 
 }
@@ -77,6 +77,17 @@ body{
     border-style: none;
     position: relative;
     left: 27%;
+}
+
+#acessarBt{
+
+    background-color: grey;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border-style: none;
+    position: relative;
+    left: 10%;
 }
 
 /* MODAL CADASTRO */

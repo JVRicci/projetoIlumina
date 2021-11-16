@@ -19,7 +19,7 @@ $row = mysqli_num_rows($result);
 
 if($row == 1){
     $_SESSION['login'] = $login;
-    header('Location: userSide/carregaMapa.html');
+    header('Location: admSide/indexAdm.php');
     exit();
 }
 else{

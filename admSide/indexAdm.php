@@ -16,7 +16,8 @@
         </title>
     </head>
     <body >
-    
+
+
         <div class="animation-area">
           <ul class="box-area">
             <li></li>
@@ -30,74 +31,63 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         
-    
-        <table class="darkTable">
+              
+        <table class="darkTable" name="registros" id='registrosTable' style="
+          position: fixed;
+          top: 20%;
+          left: 5%;">
           <thead>
-          <tr>
+          <tr >
           <th>Latitude</th>
           <th>Longitude</th>
           <th>Status</th>
           <th>Descrição</th>
           </tr>
           </thead>
-          <tfoot>
-          <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          </tr>
-          </tfoot>
           <tbody>
-          <tr>
-          <td>cell1_1</td>
-          <td>cell2_1</td>
-          <td>cell3_1</td>
-          <td>cell4_1</td>
-          </tr>
-          <tr>
-          <td>cell1_2</td>
-          <td>cell2_2</td>
-          <td>cell3_2</td>
-          <td>cell4_2</td>
-          </tr>
-          <tr>
-          <td>cell1_3</td>
-          <td>cell2_3</td>
-          <td>cell3_3</td>
-          <td>cell4_3</td>
-          </tr>
-          <tr>
-          <td>cell1_4</td>
-          <td>cell2_4</td>
-          <td>cell3_4</td>
-          <td>cell4_4</td>
-          </tr>
-          <tr>
-          <td>cell1_5</td>
-          <td>cell2_5</td>
-          <td>cell3_5</td>
-          <td>cell4_5</td>
+
+            <?php 
+
+              include ('carregaMarc.php');
+              // se i número de resultads for maior que zero, mostra info
+              if ($rows > 0){
+
+                do{
+
+            ?>
+          <tr >
+          <td id="latitudeTd"><?= $linha['latitude'] ?></td>
+          <td id="longitudeTd"><?= $linha['longitude'] ?></td>
+          <td id="statusTd"><?= $linha['status'] ?></td>
+          <td id="descricaoTd"><?= $linha['descricao'] ?></td>
+          <td id="marcTd">
+            <button id='marcBt' style="height: 25px; width: 25px;" onclick="pegaIndex()">
+          </td>
+          <?php 
+          
+          }while($linha = mysqli_fetch_assoc($resultado)); 
+          
+          }
+          ?>
           </tr>
           </tbody>
           </table>
 
 
     
-        <h1 class="tituloPagina">Pontos de Iluminação</h1> <>
+        <h1 class="tituloPagina">Pontos de Iluminação</h1> 
     
         <div class="gmap_canvas" id="map">
           
         </div>
-        <script src='funcoesMapa.js'>   </script>
+        <script src='js/mapAdm.js'>   </script>
         <script 
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhMnpZ4MbL0aMfSN9Mtou0spemSKRYPYQ&callback=initMap" 
           >
           </script>
     
-    
             
-          <button id="carregaMarc"  class="btn btn-secondary">Adcionar Marcador</button>
+          <button id="carregaMarc"  class="btn btn-primary">Finalizar</button>
     
             
           </div>

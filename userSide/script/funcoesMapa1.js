@@ -114,10 +114,11 @@ function setMarcRegular(){
   }
 }
 
+
 function finalizar(){
 
 
-  if(document.getElementById('estCrit').checked == false || document.getElementById('estReg').checked == false){
+  if(document.getElementById('btnMarcCrit').checked == false && document.getElementById('btnMarcReg').checked == false){
 
     alert('Por favor selecione o estado do poste')
     return false;
@@ -131,11 +132,12 @@ function finalizar(){
   else{
     
     alert('Registrado com Sucesso! Obrigado por usar nosso sistema!!!')
-    return true
+    
   }
 
   return false;
 }
+
 
 
 

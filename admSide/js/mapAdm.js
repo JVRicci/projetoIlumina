@@ -54,9 +54,8 @@ function initMap() {
     alert("ERRO AO CARREGAR")
   }
 
-  
-
 }
+
 
 
 function setMarcCritico(){
@@ -109,3 +108,6 @@ function setMarcRegular(){
       
   }
 }
+
+
+
